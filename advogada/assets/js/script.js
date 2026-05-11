@@ -45,4 +45,39 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
         });
     }
+
+    // --- Lógica de Contadores Animados ---
+    const iniciarContador = (elemento) => {
+        const target = parseInt(elemento.getAttribute('data-target'));
+        const prefix = elemento.getAttribute('data-prefix') || '';
+        const suffix = elemento.getAttribute('data-suffix') || '';
+        const duracao = 2000; // 2 segundos
+        const incremento = target / (duracao / 16); // 60fps aprox
+        let atual = 0;
+
+        const atualizar = () => {
+            atual += incremento;
+            if (atual < target) {
+                elemento.innerText = prefix + Math.ceil(atual) + suffix;
+                requestAnimationFrame(atualizar);
+            } else {
+                elemento.innerText = prefix + target + suffix;
+            }
+        };
+
+        atualizar();
+    };
+
+    const observerContador = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                iniciarContador(entry.target);
+                observerContador.unobserve(entry.target); // Executa apenas uma vez
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stats-bar__number').forEach(num => {
+        observerContador.observe(num);
+    });
 });

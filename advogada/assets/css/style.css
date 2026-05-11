@@ -334,7 +334,7 @@ main {
 /* --- Contact Sticker Section --- */
 .contact-sticker {
     position: sticky;
-    top: 50px;
+    top: 80px;
     z-index: 1001; /* Above the navbar background */
     display: flex;
     justify-content: center;
