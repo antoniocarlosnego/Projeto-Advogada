@@ -8,7 +8,7 @@
     font-size: 0.7rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 1rem;    
+    margin-bottom: 1rem;
     display: block;
     opacity: 0.7;
     transition: opacity 0.3s ease;
@@ -17,7 +17,8 @@
 .hero__image-container {
     background: rgba(255, 255, 255, 0.05);
     width: 400px;
-    height: calc(100% - 30px); /* Subtrai 20px para os espaços de 10px */    
+    height: calc(100% - 30px);
+    /* Subtrai 20px para os espaços de 10px */
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
@@ -259,9 +260,11 @@
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
+
     .contact-form-button {
         grid-column: 1;
     }
+
     .contact-form-label {
         margin-top: 0.5rem;
     }
@@ -313,7 +316,8 @@
 }
 
 main {
-    margin-top: 80px; /* Offset for fixed navbar */
+    margin-top: 80px;
+    /* Offset for fixed navbar */
 }
 
 /* Animations */
@@ -334,17 +338,21 @@ main {
 /* --- Contact Sticker Section --- */
 .contact-sticker {
     position: sticky;
-    top: 80px;
-    z-index: 1001; /* Above the navbar background */
+    top: 40px;
+    z-index: 1001;
+    /* Above the navbar background */
     display: flex;
     justify-content: center;
-    pointer-events: none; /* Allow clicking through the container */
-    margin-top: -30px; /* Overlap slightly with hero end */
+    pointer-events: none;
+    /* Allow clicking through the container */
+    margin-top: -30px;
+    /* Overlap slightly with hero end */
     padding-bottom: 20px;
 }
 
 .contact-sticker__container {
-    pointer-events: auto; /* Enable clicking on the actual icons */
+    pointer-events: auto;
+    /* Enable clicking on the actual icons */
     background: var(--bem-surface);
     border: 1px solid var(--bem-border);
     padding: 1rem 0.8rem;
@@ -401,6 +409,7 @@ main {
         margin-top: 2rem;
         z-index: 10;
     }
+
     .contact-sticker__list {
         flex-direction: row;
         gap: 2rem;
