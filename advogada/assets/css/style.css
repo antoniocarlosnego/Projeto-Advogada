@@ -1,0 +1,404 @@
+/* 
+   STYLE.CSS - ESTILOS ESPECÍFICOS DA PÁGINA NATÁLIA DOURADO
+   Este arquivo contém os estilos que foram extraídos do HTML e melhorias visuais.
+*/
+
+/* --- Hero Section --- */
+.hero__oab {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.hero__image-container {
+    background: rgba(255, 255, 255, 0.05);
+    width: 400px;
+    height: calc(100% - 20px); /* Subtrai 20px para os espaços de 10px */
+    margin: 10px 0; /* Adiciona 10px em cima e embaixo */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease;
+    overflow: hidden;
+    border-radius: 24px;
+    /* Adicionado 24px */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    /* Adicionado sombreamento */
+}
+
+.hero__image-container:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero__image-initials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.hero__image-initials-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.bem-hero:hover .hero__image-initials {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .bem-hero_imagem {
+        display: flex !important;
+        /* Força visibilidade no mobile */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.25;
+        /* Transparência para legibilidade */
+        z-index: 1;
+        border-radius: 0;
+        /* Remove raio no fundo total */
+        box-shadow: none;
+        border: none;
+    }
+
+    .bem-hero__titulo {
+        z-index: 2;
+        /* Texto acima da imagem transparente */
+        position: relative;
+    }
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--bem-border);
+    padding: 2rem 0;
+}
+
+.stats-bar__container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.stats-bar__grid {
+    text-align: center;
+}
+
+.stats-bar__number {
+    font-family: var(--bem-font-heading);
+    font-size: 3rem;
+    color: var(--bem-primary);
+    transition: transform 0.3s ease;
+}
+
+.stats-bar__grid div:hover .stats-bar__number {
+    transform: translateY(-5px);
+}
+
+.stats-bar__label {
+    font-size: 0.8rem;
+    color: var(--bem-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- About Section --- */
+.about-section {
+    background: var(--bem-surface);
+}
+
+.about-grid {
+    align-items: center;
+}
+
+.about-image-placeholder {
+    background: #ede0e0;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+    /* Adicionado 20px */
+    box-shadow: 0 15px 35px rgba(107, 26, 42, 0.15);
+    /* Sombreamento com tom de vinho */
+}
+
+.about-image-initials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease;
+}
+
+.about-image-initials-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.about-image-placeholder:hover .about-image-initials {
+    transform: scale(1.05);
+}
+
+.about-title {
+    text-align: left;
+}
+
+.about-text {
+    margin-bottom: 1.5rem;
+    color: var(--bem-text-muted);
+}
+
+.about-text--secondary {
+    margin-bottom: 2rem;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: var(--bem-primary);
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 4px 6px 0 0 var(--bem-dark);
+}
+
+.contact-title {
+    color: #fff;
+}
+
+.contact-glass {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bem-form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem 2rem;
+    align-items: center;
+}
+
+.bem-form__group {
+    display: contents;
+}
+
+.contact-form-label {
+    color: rgba(255, 255, 255, 0.7);
+    grid-column: 1;
+    text-align: left;
+}
+
+.contact-form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease, background 0.3s ease;
+    grid-column: 2;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form-input:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
+.contact-form-button {
+    background: #fff;
+    color: var(--bem-primary);
+    width: 100%;
+    transition: transform 0.2s ease, background 0.3s ease;
+    grid-column: 1 / span 2;
+    margin-top: 1rem;
+    border-radius: 16px;
+}
+
+.contact-form-button:hover {
+    background: #f0f0f0;
+    transform: scale(1.02);
+}
+
+@media (max-width: 580px) {
+    .bem-form {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .contact-form-button {
+        grid-column: 1;
+    }
+    .contact-form-label {
+        margin-top: 0.5rem;
+    }
+}
+
+/* --- Footer --- */
+.footer-main {
+    background: var(--bem-dark);
+    color: rgba(255, 255, 255, 0.5);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer-brand {
+    font-family: var(--bem-font-heading);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* --- Micro-transitions --- */
+.bem-btn,
+.bem-card,
+.bem-navbar__link,
+.bem-faq-question {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bem-navbar {
+    transition: padding 0.3s ease, background 0.3s ease;
+}
+
+#navbar-principal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 80px; /* Offset for fixed navbar */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.08);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* --- Contact Sticker Section --- */
+.contact-sticker {
+    position: sticky;
+    top: 0;
+    z-index: 101; /* Above the navbar background */
+    display: flex;
+    justify-content: center;
+    pointer-events: none; /* Allow clicking through the container */
+    margin-top: -30px; /* Overlap slightly with hero end */
+    padding-bottom: 20px;
+}
+
+.contact-sticker__container {
+    pointer-events: auto; /* Enable clicking on the actual icons */
+    background: var(--bem-surface);
+    border: 1px solid var(--bem-border);
+    padding: 1rem 0.8rem;
+    border-radius: 50px;
+    box-shadow: var(--bem-shadow-lg);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effect when "joined" to the menu (approximated by sticky behavior) */
+.contact-sticker__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact-sticker__item {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: contactSlideLeft 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: var(--delay);
+}
+
+.contact-sticker__item a {
+    color: var(--bem-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(107, 26, 42, 0.05);
+    transition: all 0.3s ease;
+}
+
+.contact-sticker__item a:hover {
+    background: var(--bem-primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+@keyframes contactSlideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustment: on small screens, make it horizontal or more compact if needed */
+@media (max-width: 768px) {
+    .contact-sticker {
+        position: relative;
+        margin-top: 2rem;
+        z-index: 10;
+    }
+    .contact-sticker__list {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
