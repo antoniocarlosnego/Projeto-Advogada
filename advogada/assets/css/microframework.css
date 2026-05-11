@@ -154,14 +154,14 @@ a{
 
 .bem-hero__titulo p {
     font-size: 1.1rem;
+    text-align: justify;
     margin-bottom: 2rem;
     opacity: 0.9;
     max-width: 500px;
 }
 
 .bem-hero_imagem{
-  position: absolute;
-  bottom: 0;
+  position: absolute;  
   right: 5%;
   height: 90%;
   z-index: 2;
@@ -215,6 +215,7 @@ a{
 .bem-card__body p {
   color: var(--bem-text-muted);
   font-size: 0.95rem;
+  text-align: justify;
 }
 
 /* BUTTONS */
