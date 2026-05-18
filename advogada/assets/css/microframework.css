@@ -199,6 +199,12 @@ a {
   gap: var(--bem-spacing-xl);
 }
 
+.bem-grid-justificado {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--bem-spacing-xl);
+}
+
 /* CARDS */
 .bem-card {
   background-color: var(--bem-surface);

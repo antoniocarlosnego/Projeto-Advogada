@@ -243,11 +243,13 @@
 .contact-form-button {
     background: #fff;
     color: var(--bem-primary);
-    width: 100%;
+    width: 50%;
     transition: transform 0.2s ease, background 0.3s ease;
     grid-column: 1 / span 2;
     margin-top: 1rem;
     border-radius: 16px;
+    margin-left: 25%;
+    align-self: center;
 }
 
 .contact-form-button:hover {
